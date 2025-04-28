@@ -375,8 +375,8 @@ footer {
         padding-bottom: 13px;
         list-style: circle;
 
-        li{
-         font-family: var(--open);
+        li {
+          font-family: var(--open);
         }
       }
     }
@@ -385,33 +385,44 @@ footer {
 
 /* Mes projets (réutilisable) */
 
-.mes-projets {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
+.projets {
+  margin-bottom: 30px;
 
-  article {
-    border: solid 1px var(--white);
-    padding: 34px 16px 16px 16px;
-    position: relative;
-    margin-bottom: 70px;
-    flex: 1 0 27%;
+  .head-projets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+  }
 
-    .tag {
-      position: absolute;
-      background: var(--darkblue);
-      padding: 5px;
-      top: 49px;
-      left: 31px;
-    }
+  .mes-projets {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
 
-    h3 {
-      margin: 15px 0;
-    }
+    article {
+      border: solid 1px var(--white);
+      padding: 34px 16px 16px 16px;
+      position: relative;
+      margin-bottom: 70px;
+      flex: 1 0 27%;
 
-    a {
-      position: absolute;
-      bottom: -60px;
+      .tag {
+        position: absolute;
+        background: var(--darkblue);
+        padding: 5px;
+        top: 49px;
+        left: 31px;
+      }
+
+      h3 {
+        margin: 15px 0;
+      }
+
+      a {
+        position: absolute;
+        bottom: -60px;
+      }
     }
   }
 }
@@ -499,18 +510,40 @@ footer {
         }
       }
     }
+  }
+}
 
-    /* Section 4 : Mes projets */
+/* Formation à la carte */
 
-    #projets {
-      margin-bottom: 30px;
+#page-a-la-carte {
+  /* Section 1 : Presentation à la carte */
 
-      #head-projets {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 120px;
-      }
+  #presentation-a-la-carte {
+    padding: 150px 0;
+    background: var(--red);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Section 2 : Description à la carte */
+
+  #description-a-la-carte {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    article {
+      max-width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    img {
+      max-width: 45%;
     }
   }
 }
@@ -552,16 +585,41 @@ footer {
       }
     }
   }
+
+  /* Formation à la carte */
+
+  #page-a-la-carte {
+    /* Section 2 : Description à la carte */
+    #description-a-la-carte {
+      flex-direction: column;
+      gap: 20px;
+
+      article {
+        max-width: none !important;
+      }
+
+      img {
+        max-width: 90%;
+      }
+    }
+  }
 }
 
 /* Responsive mobile */
 
 @media screen and (max-width: 767px) {
   /* Projets (réutilisable) */
+
   .mes-projets article {
-    flex: 1 0 50%;
+    flex: 1 0 50%!important;
   }
+  .head-projets {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   /* Home */
+
   #home {
     /* Section 1 : Qui suis-je ? */
     #about-me {
@@ -585,11 +643,16 @@ footer {
         }
       }
     }
+  }
 
-    /* Section 4 : Mes projets */
-    #head-projets {
-      flex-direction: column;
-      gap: 10px;
+  /* Formation à la carte */
+
+  #page-a-la-carte {
+    /* Section 2 : Description à la carte */
+    #description-a-la-carte {
+      img {
+        max-width: 90% !important;
+      }
     }
   }
 }
