@@ -67,7 +67,7 @@ img {
   padding: 11px 21px;
 
   &:hover {
-    scale: 1.05;
+    background: var(--red);
   }
 }
 
@@ -77,8 +77,7 @@ img {
   color: var(--white);
 
   &:hover {
-    color: var(--white);
-    scale: 1.05;
+    background: var(--red);
   }
 }
 
@@ -115,6 +114,175 @@ body {
   background: var(--darkblue);
 }
 
+/* Animations */
+
+img {
+  animation: 3s appear;
+}
+
+@keyframes appear {
+  0% {
+    width: 20%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+header li {
+  opacity: 0;
+  position: relative;
+
+  &:nth-child(1) {
+    animation: 1s slideUp;
+    animation-fill-mode: forwards;
+  }
+  &:nth-child(2) {
+    animation: 1s slideUp;
+    animation-fill-mode: forwards;
+    animation-delay: 0.15s;
+  }
+  &:nth-child(3) {
+    animation: 1s slideUp;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+  }
+  &:nth-child(4) {
+    animation: 1s slideUp;
+    animation-fill-mode: forwards;
+    animation-delay: 0.45s;
+  }
+  &:nth-child(5) {
+    animation: 1s slideUp;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+  }
+  &:nth-child(6) {
+    animation: 1s slideUp;
+    animation-fill-mode: forwards;
+    animation-delay: 0.75s;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#formation {
+  animation: 2s up;
+}
+
+@keyframes up {
+  0% {
+    margin-top: 500px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+/* Modal */
+
+.modal {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 291.5px);
+  left: calc(50% - 165px);
+
+  .modal-overlay{
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   left: 0;
+  }
+
+  .modal-content {
+    width: 300px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+
+    #close-modal {
+      position: relative;
+      left: 261px;
+      color: var(--white);
+      background: var(--orange);
+      padding: 5px 15px;
+
+      &:hover{
+         background: var(--red);
+      }
+    }
+
+    #contact {
+      background: var(--white);
+      text-align: center;
+      padding: 15px;
+      margin-top: 5px;
+
+      h2 {
+        color: var(--darkblue);
+        margin-bottom: 20px;
+      }
+
+      form {
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        label {
+          font-family: var(--raleway);
+          color: var(--darkblue);
+          font-weight: 800;
+          background: var(--orange);
+          padding: 10px 20px;
+        }
+
+        input,
+        textarea {
+          font-family: var(--open);
+          padding: 5px;
+          border: 1px solid var(--darkblue);
+          border-radius: 3px;
+
+          &::placeholder {
+            font-family: var(--open);
+          }
+        }
+
+        textarea {
+          min-height: 80px;
+          resize: none;
+        }
+
+        a {
+          background: var(--darkblue);
+          text-align: center;
+          padding: 10px;
+
+          &:hover{
+            background: var(--red);
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal:not(:target) {
+  display: none;
+}
+
 /* Header */
 
 header {
@@ -126,6 +294,7 @@ header {
   #logo {
     img {
       max-width: 180px;
+      animation: none;
     }
   }
 
@@ -374,6 +543,10 @@ footer {
 /* Responsive mobile */
 
 @media screen and (max-width: 767px) {
+  /* Projets (réutilisable) */
+  .mes-projets article {
+    flex: 1 0 50%;
+  }
   /* Home */
   #home {
     /* Section 1 : Qui suis-je ? */
@@ -397,6 +570,12 @@ footer {
           max-width: fit-content !important;
         }
       }
+    }
+
+    /* Section 4 : Mes projets */
+    #head-projets {
+      flex-direction: column;
+      gap: 10px;
     }
   }
 }

@@ -11,6 +11,41 @@
     ></script>
   </head>
   <body id="home">
+    <section
+      role="dialog"
+      class="modal"
+      id="modal"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal-content">
+        <a href="#" id="close-modal">X</a>
+        <div id="contact">
+          <h2 id="modal-title">Me contacter</h2>
+          <form action="#">
+            <label for="name">Votre nom :</label>
+            <input type="text" name="name" id="name" placeholder="Votre nom" />
+
+            <label for="email">Votre email :</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Votre email"
+            />
+
+            <label for="message">Votre message :</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Votre message"
+            ></textarea>
+
+            <a href="#">Envoyer la demande</a>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <header class="container-1440">
       <a href="/" id="logo">
         <img src="img/Logo.png" alt="Logo" />
@@ -24,7 +59,7 @@
           <li><a href="/">Ma formation</a></li>
           <li><a href="#mes-competences">Mes compétences</a></li>
           <li><a href="/">Mes projets</a></li>
-          <li><a href="#" class="contact-me">Contactez moi</a></li>
+          <li><a href="#modal" class="contact-me">Contactez moi</a></li>
         </ul>
       </nav>
 
@@ -61,7 +96,7 @@
             soluta libero voluptate sit, maiores consequatur minus perspiciatis
             perferendis porro? Consectetur, laborum quo!
           </p>
-          <a href="#" class="contact-me">Contactez moi</a>
+          <a href="#modal" class="contact-me">Contactez moi</a>
         </article>
         <img src="img/moi.png" alt="Photo de moi" />
       </section>
