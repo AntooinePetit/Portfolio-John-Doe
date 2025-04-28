@@ -198,11 +198,11 @@ header li {
   top: calc(50% - 291.5px);
   left: calc(50% - 165px);
 
-  .modal-overlay{
-   width: 100vw;
-   height: 100vh;
-   position: absolute;
-   left: 0;
+  .modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
   }
 
   .modal-content {
@@ -218,8 +218,8 @@ header li {
       background: var(--orange);
       padding: 5px 15px;
 
-      &:hover{
-         background: var(--red);
+      &:hover {
+        background: var(--red);
       }
     }
 
@@ -270,7 +270,7 @@ header li {
           text-align: center;
           padding: 10px;
 
-          &:hover{
+          &:hover {
             background: var(--red);
           }
         }
@@ -345,25 +345,39 @@ footer {
     margin-bottom: 50px;
   }
 
-  ul {
+  div {
     list-style: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
 
-    li {
+    details {
       flex: 1 0 44%;
       background: var(--white);
       padding: 15px 15px 2px 15px;
+      height: fit-content;
 
-      p {
+      summary {
         width: fit-content;
         font-size: 18px;
         font-weight: 600;
         color: var(--orange);
         padding-bottom: 11px;
         border-bottom: solid 2px var(--red);
+      }
+
+      ul {
+        margin-top: 10px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 13px;
+        list-style: circle;
+
+        li{
+         font-family: var(--open);
+        }
       }
     }
   }
