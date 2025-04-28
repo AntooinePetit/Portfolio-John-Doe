@@ -1,0 +1,402 @@
+/* Import fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Uniformisation */
+
+:root {
+  /* Fonts */
+  --open: "Open Sans", sans-serif;
+  --raleway: "Raleway", sans-serif;
+  /* Colors */
+  --darkblue: #011826;
+  --lightblue: #2cc1aa;
+  --orange: #ff9a16;
+  --red: #e7174a;
+  --white: #f7fff2;
+}
+
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+
+h1,
+h2 {
+  font-family: var(--raleway);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+h3 {
+  font-family: var(--raleway);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+p {
+  font-family: var(--open);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--open);
+  font-size: 16px;
+  color: var(--white);
+}
+
+img {
+  width: 100%;
+}
+
+.active {
+  color: var(--red);
+}
+
+.blue-button {
+  font-weight: 400;
+  background: var(--darkblue);
+  border: 1px solid var(--white);
+  padding: 11px 21px;
+
+  &:hover {
+    scale: 1.05;
+  }
+}
+
+.contact-me {
+  font-weight: 600;
+  background: var(--orange);
+  color: var(--white);
+
+  &:hover {
+    color: var(--white);
+    scale: 1.05;
+  }
+}
+
+.skill {
+  background: var(--white);
+  padding: 15px 15px 1px 15px;
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--orange);
+    padding-bottom: 12px;
+    border: solid 2px var(--red);
+  }
+}
+
+.project {
+  border: 1px solid var(--white);
+}
+
+.container-1440 {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.container-1140 {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+body {
+  background: var(--darkblue);
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px !important;
+
+  #logo {
+    img {
+      max-width: 180px;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+      text-align: center;
+      padding: 0;
+
+      li {
+        a {
+          color: var(--orange);
+
+          &:hover {
+            color: var(--red);
+          }
+        }
+
+        .contact-me {
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  #burgermenu {
+    display: none;
+  }
+}
+
+/* Footer */
+
+footer {
+  background: var(--lightblue);
+  text-align: center;
+  padding: 15px;
+}
+
+/* Compétences (réutilisable) */
+
+.competences {
+  margin: 100px auto;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    li {
+      flex: 1 0 44%;
+      background: var(--white);
+      padding: 15px 15px 2px 15px;
+
+      p {
+        width: fit-content;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--orange);
+        padding-bottom: 11px;
+        border-bottom: solid 2px var(--red);
+      }
+    }
+  }
+}
+
+/* Mes projets (réutilisable) */
+
+.mes-projets {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  article {
+    border: solid 1px var(--white);
+    padding: 34px 16px 16px 16px;
+    position: relative;
+    margin-bottom: 70px;
+    flex: 1 0 27%;
+
+    .tag {
+      position: absolute;
+      background: var(--darkblue);
+      padding: 5px;
+      top: 49px;
+      left: 31px;
+    }
+
+    h3 {
+      margin: 15px 0;
+    }
+
+    a {
+      position: absolute;
+      bottom: -60px;
+    }
+  }
+}
+
+/* Home */
+
+#home {
+  /* Main */
+
+  main {
+    /* Section 1 : Qui suis-je ? */
+
+    #about-me {
+      margin: 100px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      article {
+        max-width: 45%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .contact-me {
+          padding: 10px 20px 20px 20px;
+          width: fit-content;
+        }
+      }
+
+      img {
+        max-width: 45%;
+      }
+    }
+
+    /* Section 2 : Mes formations */
+
+    #formation {
+      text-align: center;
+
+      h2 {
+        margin-bottom: 50px;
+      }
+
+      #mes-formations {
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        div {
+          text-align: start;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          &:nth-child(2) {
+            flex-direction: row-reverse;
+
+            article {
+              left: 0;
+            }
+          }
+
+          img {
+            max-width: 798px;
+          }
+
+          article {
+            background: var(--orange);
+            padding: 40px;
+            max-width: 360px;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .blue-button {
+              position: absolute;
+              bottom: -20px;
+              left: calc(50% - 74px);
+            }
+          }
+        }
+      }
+    }
+
+    /* Section 4 : Mes projets */
+
+    #projets {
+      margin-bottom: 30px;
+
+      #head-projets {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 120px;
+      }
+    }
+  }
+}
+
+/* Responsive tablette */
+
+@media screen and (max-width: 1024px) {
+  header {
+    nav {
+      display: none;
+    }
+    #burgermenu {
+      display: block;
+      color: var(--white);
+    }
+  }
+
+  /* Home */
+
+  #home {
+    /* Section 1 : Qui suis-je ? */
+    #about-me {
+      flex-direction: column;
+      gap: 20px;
+
+      article {
+        max-width: none !important;
+      }
+
+      img {
+        max-width: 60%;
+      }
+    }
+
+    /* Section 2 : Mes formations */
+    #formation {
+      article {
+        max-width: 25% !important;
+      }
+    }
+  }
+}
+
+/* Responsive mobile */
+
+@media screen and (max-width: 767px) {
+  /* Home */
+  #home {
+    /* Section 1 : Qui suis-je ? */
+    #about-me {
+      img {
+        max-width: 90% !important;
+      }
+    }
+
+    /* Section 2 : Mes formations */
+    #formation {
+      div {
+        flex-direction: column !important;
+
+        img {
+          max-width: 70% !important;
+        }
+
+        article {
+          position: relative !important;
+          max-width: fit-content !important;
+        }
+      }
+    }
+  }
+}
