@@ -57,7 +57,7 @@ img {
 }
 
 .active {
-  color: var(--red);
+  color: var(--red)!important;
 }
 
 .blue-button {
@@ -395,34 +395,40 @@ footer {
     margin-bottom: 120px;
   }
 
-  .mes-projets {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+  .voir-plus-de-projets {
+    display: block;
+    width: fit-content;
+    margin: auto;
+  }
+}
 
-    article {
-      border: solid 1px var(--white);
-      padding: 34px 16px 16px 16px;
-      position: relative;
-      margin-bottom: 70px;
-      flex: 1 0 27%;
+.mes-projets {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 
-      .tag {
-        position: absolute;
-        background: var(--darkblue);
-        padding: 5px;
-        top: 49px;
-        left: 31px;
-      }
+  article {
+    border: solid 1px var(--white);
+    padding: 34px 16px 16px 16px;
+    position: relative;
+    margin-bottom: 70px;
+    flex: 1 0 27%;
 
-      h3 {
-        margin: 15px 0;
-      }
+    .tag {
+      position: absolute;
+      background: var(--darkblue);
+      padding: 5px;
+      top: 49px;
+      left: 31px;
+    }
 
-      a {
-        position: absolute;
-        bottom: -60px;
-      }
+    h3 {
+      margin: 15px 0;
+    }
+
+    a {
+      position: absolute;
+      bottom: -60px;
     }
   }
 }
@@ -548,6 +554,43 @@ footer {
   }
 }
 
+/* Mes projets */
+
+#page-mes-projets {
+  /* Section 1 : Presentation mes projets */
+
+  #presentation-mes-projets {
+    padding: 150px 0;
+    background: var(--red);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Section 2 : Tous mes projets */
+
+  #tous-mes-projets {
+    margin: 50px auto;
+
+    .pages {
+      text-align: center;
+      display: flex;
+      gap: 10px;
+      width: fit-content;
+      margin: auto;
+
+      a {
+        color: var(--orange);
+
+        &:hover {
+          color: var(--red);
+        }
+      }
+    }
+  }
+}
+
 /* Responsive tablette */
 
 @media screen and (max-width: 1024px) {
@@ -611,7 +654,7 @@ footer {
   /* Projets (réutilisable) */
 
   .mes-projets article {
-    flex: 1 0 50%!important;
+    flex: 1 0 50% !important;
   }
   .head-projets {
     flex-direction: column;
