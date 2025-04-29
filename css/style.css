@@ -57,7 +57,7 @@ img {
 }
 
 .active {
-  color: var(--red)!important;
+  color: var(--red) !important;
 }
 
 .blue-button {
@@ -117,7 +117,7 @@ body {
 /* Animations */
 
 img {
-  animation: 3s appear;
+  animation: 2.5s appear;
 }
 
 @keyframes appear {
@@ -365,6 +365,10 @@ footer {
         color: var(--orange);
         padding-bottom: 11px;
         border-bottom: solid 2px var(--red);
+
+        &:hover{
+          cursor: pointer;
+        }
       }
 
       ul {
@@ -644,6 +648,13 @@ footer {
       img {
         max-width: 90%;
       }
+    }
+  }
+
+  /* Mes projets */
+  .mes-projets {
+    article {
+      flex: 1 0 28% !important;
     }
   }
 }
