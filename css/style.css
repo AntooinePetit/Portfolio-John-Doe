@@ -56,7 +56,7 @@ img {
   width: 100%;
 }
 
-.active {
+.page-active {
   color: var(--red) !important;
 }
 
@@ -192,7 +192,7 @@ header li {
 
 /* Modal */
 
-.modal {
+dialog {
   position: absolute;
   z-index: 2;
   top: calc(50% - 291.5px);
@@ -317,6 +317,35 @@ header {
 
         .contact-me {
           padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  .active{
+    display: block;
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    left: 0;
+    background: var(--orange);
+
+    ul{
+      display: block;
+      text-align: start;
+
+      li{
+        a{
+          padding: 5px 15px;
+          display: block;
+          background: none;
+          font-weight: 400;
+          color: var(--white);
+
+          &:hover{
+            color: var(--white) !important;
+            background: var(--red);
+          }
         }
       }
     }
@@ -605,6 +634,10 @@ footer {
     #burgermenu {
       display: block;
       color: var(--white);
+
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 
